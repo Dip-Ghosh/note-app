@@ -1,6 +1,9 @@
 
 const addBtn =  document.getElementById('add');
 
+const deleteCard = (note) => {
+
+}
 
 const openCard = () => {
 
@@ -19,7 +22,17 @@ const openCard = () => {
     // <div className="main ${text ? "" : " hidden"}"></div>
     // <textarea className="${text ? " hidden" : ""}"></textarea>
 
+
+    // const editBtn   = note.querySelector('.edit');
+    // editBtn.addEventListener('click', editCard);
+
+    const deleteBtn = note.querySelector('.delete');
+    deleteBtn.addEventListener('click', () => {
+        note.remove();
+    });
+
     document.body.appendChild(note);
+
 }
 
 
